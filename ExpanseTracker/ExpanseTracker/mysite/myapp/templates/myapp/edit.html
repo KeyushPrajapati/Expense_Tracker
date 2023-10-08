@@ -1,0 +1,49 @@
+{% extends 'myapp/base.html' %}
+{% block body %}
+<section class="container-fluid  border-red-200 flex flex-col items-center justify-center">
+    <div class="  w-[90%] font-bold text-['poppins'] text-4xl text-[#003E59]">Add Expense</div>
+    <form method="post" class="border container  m-10 rounded-[20px] text-['poppins']">
+        {% csrf_token %}
+
+        <div class="container-fluid w-[100%] py-10 flex">
+            <div class="mx-10">
+                <div class="mb-2 text-xl ml-3 font-medium text-[#00684A]">
+                    <label>Expense Name</label>
+                </div>
+                <input type="{{ expense.name.field.widget.input_type }}" placeholder="Ex-IPhone" required
+                    class="border rounded-full p-3 text-lg text-[#00684A] w-[300px] hover:border-[#003E59]"
+                    name="{{ expense.name.name}}" value="{{expense.name.value}}"  id="{{ form.name.auto_id}}">
+            </div>
+            <div class="mx-10">
+                <div class="mb-2 text-xl ml-3 font-medium text-[#00684A]">
+                    <label>Amount</label>
+                </div>
+                <input type="{{ expense.amount.field.widget.input_type }}"
+                    class="border rounded-full p-3 text-lg text-[#00684A] w-[300px] hover:border-[#003E59]"
+                    name="{{ expense.amount.name}}" value="{{expense.amount.value}}" min="0" oninput="validity.valid||(value='');" placeholder="Ex-2000₹"
+                    id="{{ expense.amount.auto_id}}">
+            </div>
+            <div class="mx-10">
+                <div class="mb-2 text-xl ml-3 font-medium text-[#00684A]">
+                    <label>Category</label>
+                </div>
+                <select required name="{{ expense.category.name}}" id="{{ expense.category.auto_id}}"
+                    class="border rounded-full p-3 text-lg text-[#00684A] w-[300px] hover:border-[#003E59]">
+                    {% for id, value in expense.category.field.choices %}
+                    {% if id == expense.category.value %}
+                    <option value="{{ id }}" selected>{{value}}</option>
+                    {% else %}
+                    <option value="{{ id }}">{{value}}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+
+            </div>
+            <div class="mx-10 my-9">
+                <button class="bg-[#00ED64] border rounded-full p-3 text-lg  w-[130px] border-[#003E59]">Add</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+{% endblock %}

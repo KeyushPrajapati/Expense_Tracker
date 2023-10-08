@@ -1,0 +1,162 @@
+{% extends 'myapp/base.html' %}
+{% load static %}
+{% block body %}
+<body>
+  <section class="flex justify-center mt-10 ">
+    <div class="flex w-[90%] items-center border-blue-800  max-[968px]:text-center max-[968px]:flex-col-reverse">
+      <!-- container -->
+      <div
+        class=" border-red-400 flex flex-col  w-[50%] max-[968px]:w-[100%] max-[968px]:items-center max-[968px]:mt-7">
+        <!-- Intro Defination -->
+        <div
+          class=" text-[#003E59] font-['poppins']  text-6xl leading-[70px] font-bold max-[1256px]:text-5xl max-[1256px]:leading-[60px] max-[1110px]:text-5xl max-[1110px]:leading-[60px] max-[412px]:text-4xl ">
+          <!-- heading -->
+          Track Your Expenses Easily With <p
+            class="text-[#00ED64] text-8xl max-[1256px]:text-7xl max-[1110px]:text-6xl max-[412px]:text-5xl">EXTracker</p>
+        </div>
+
+        <div class=" text-stone-400 text-xl border-blue-100 mt-4 w-5/6 max-[968px]:w-[90%]">
+          <!-- descreption -->
+          Easily log your expenses, visualize spending patterns with interactive graphs, and receive personalized
+          suggestions to manage your finances better. Take control of your money and reach your financial goals with
+          ExpenseTrackr today!
+
+        </div>
+
+      </div>
+      <div class=" w-[50%] flex justify-center max-[968px]:w-[80%]">
+        <!-- purpose visualization Image-->
+        <img src="{% static 'myapp/images/Brief.png' %}" class="w-[90%] max-[1110px]:w-[100%]" width="" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- website features is here -->
+  <section class="  mt-10   flex justify-center bg-[#c4feab52] pt-10 pb-10 rounded-[50px]">
+
+    <div class="   w-[90%]  border-red-400 grid  grid-cols-3 max-[776px]:grid-cols-1 gap-10 mt-4 mb-4">
+
+      <!-- Analytics is here -->
+      <div class=" flex flex-col  gap-8 border-green-600 max-[412px]:gap-4">
+
+        <svg class="w-[50px] relative" viewBox="0 0 106 103" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M49.6116 57.8607C48.9941 57.8607 48.3766 57.7182 47.8065 57.3857L5.86245 33.1124C4.15239 32.1148 3.58228 29.9296 4.57981 28.2196C5.57735 26.5095 7.71492 25.9394 9.47248 26.9369L49.6116 50.1654L89.5124 27.0796C91.2225 26.082 93.4076 26.6997 94.4051 28.3622C95.4026 30.0723 94.7856 32.2572 93.123 33.2547L51.4642 57.3857C50.8466 57.6707 50.2291 57.8607 49.6116 57.8607Z"
+            fill="#00ED64" />
+          <path
+            d="M49.6143 100.898C47.6667 100.898 46.0516 99.2825 46.0516 97.3349V54.251C46.0516 52.3034 47.6667 50.6884 49.6143 50.6884C51.5618 50.6884 53.1769 52.3034 53.1769 54.251V97.3349C53.1769 99.2825 51.5618 100.898 49.6143 100.898Z"
+            fill="#00ED64" />
+          <path
+            d="M49.6091 102.75C45.2864 102.75 41.1538 101.753 38.0187 99.9951L12.6528 85.9346C5.76511 82.1345 0.349976 72.9667 0.349976 65.0814V38.1954C0.349976 30.3101 5.76511 21.19 12.6528 17.3424L38.0187 3.28181C44.4789 -0.328311 54.6442 -0.328311 61.1519 3.28181L86.5178 17.3424C93.4055 21.1425 98.8207 30.3101 98.8207 38.1954V55.5811C98.8207 57.5287 97.2056 59.1437 95.2581 59.1437C93.3105 59.1437 91.6955 57.5287 91.6955 55.5811V38.1954C91.6955 32.9702 87.6578 26.1302 83.0977 23.6126L57.7318 9.55207C53.4092 7.12949 45.8564 7.12949 41.5338 9.55207L16.1679 23.6126C11.5603 26.1777 7.57017 32.9702 7.57017 38.1954V65.0814C7.57017 70.3066 11.6078 77.1468 16.1679 79.6644L41.5338 93.7249C45.7139 96.0524 53.5992 96.0524 57.7318 93.7249C59.4419 92.7748 61.627 93.3924 62.577 95.1024C63.527 96.8125 62.9095 98.9975 61.1994 99.9476C58.0643 101.753 53.9317 102.75 49.6091 102.75Z"
+            fill="#00ED64" />
+          <path
+            d="M83.8155 99.9C73.4602 99.9 65.0524 91.4923 65.0524 81.1369C65.0524 70.7816 73.4602 62.3738 83.8155 62.3738C94.1708 62.3738 102.579 70.7816 102.579 81.1369C102.579 91.4923 94.1708 99.9 83.8155 99.9ZM83.8155 69.499C77.4028 69.499 72.1776 74.7242 72.1776 81.1369C72.1776 87.5496 77.4028 92.7748 83.8155 92.7748C90.2282 92.7748 95.4534 87.5496 95.4534 81.1369C95.4534 74.7242 90.2282 69.499 83.8155 69.499Z"
+            fill="#00ED64" />
+          <path
+            d="M101.864 102.75C100.961 102.75 100.059 102.418 99.3462 101.705L94.596 96.955C93.2185 95.5774 93.2185 93.2969 94.596 91.9193C95.9736 90.5418 98.2536 90.5418 99.6312 91.9193L104.381 96.6695C105.759 98.047 105.759 100.328 104.381 101.705C103.669 102.418 102.766 102.75 101.864 102.75Z"
+            fill="#00ED64" />
+        </svg>
+
+
+        <div class=" border-blue-600 font-['poppins'] font-bold text-4xl max-[412px]:text-3xl">
+          <!-- title -->
+          Analytics
+        </div>
+        <div class=" border-blue-600 text-stone-500 text-lg">
+          <!-- description -->
+          EXTracker takes the hassle out of analyzing your spending patterns. Our intuitive analytics feature provides
+          you with clear and insightful graphs and charts, giving you a comprehensive view of your expenses.
+        </div>
+
+      </div>
+
+      <!-- Reminder is here -->
+      <div class=" flex flex-col  gap-8  border-green-600 max-[412px]:gap-4 ">
+
+        <svg class="w-[50px] " viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M53.2323 106C24.254 106 0.700073 82.446 0.700073 53.4678C0.700073 24.4896 24.254 0.935577 53.2323 0.935577C82.2105 0.935577 105.764 24.4896 105.764 53.4678C105.764 82.446 82.2105 106 53.2323 106ZM53.2323 8.26565C28.31 8.26565 8.03015 28.5455 8.03015 53.4678C8.03015 78.39 28.31 98.6699 53.2323 98.6699C78.1545 98.6699 98.4344 78.39 98.4344 53.4678C98.4344 28.5455 78.1545 8.26565 53.2323 8.26565Z"
+            fill="#00ED64" />
+          <path
+            d="M71.3599 72.6725C70.7246 72.6725 70.0893 72.5259 69.5029 72.135L54.3541 63.0946C50.5913 60.8467 47.8059 55.9111 47.8059 51.5619V31.5264C47.8059 29.5229 49.4674 27.8614 51.4709 27.8614C53.4745 27.8614 55.136 29.5229 55.136 31.5264V51.5619C55.136 53.3211 56.602 55.9111 58.1169 56.7907L73.2657 65.8311C75.0249 66.8573 75.5625 69.1052 74.5363 70.8645C73.8032 72.0373 72.5816 72.6725 71.3599 72.6725Z"
+            fill="#00ED64" />
+        </svg>
+
+        <div class=" border-blue-600 font-['poppins'] font-bold text-4xl max-[412px]:text-3xl ">
+          <!-- title -->
+          Reminder
+        </div>
+        <div class=" border-blue-600 text-stone-500 text-lg">
+          <!-- description -->
+          EXTracker ensures you never miss an EMI payment or important financial deadline again. With our powerful
+          reminder feature, you can set customized alerts for upcoming payments, bills, and other financial commitments.
+        </div>
+
+      </div>
+
+      <!-- Auto suggestion is here -->
+      <div class=" flex flex-col max-[412px]:gap-4 gap-8 border-green-600">
+
+        <svg class="w-[50px] relative" viewBox="0 0 106 106" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M81.2452 100.809C79.729 100.809 78.2127 100.417 76.8431 99.5859L57.2292 87.9443C55.1749 87.8953 53.1206 87.7491 51.1641 87.4556C49.8434 87.26 48.7185 86.3791 48.2293 85.1073C47.7402 83.8356 47.9848 82.4661 48.8652 81.4389C52.0934 77.6726 53.7564 73.1727 53.7564 68.3793C53.7564 56.5425 43.3381 46.9067 30.5229 46.9067C25.7295 46.9067 21.1317 48.2278 17.2676 50.7713C16.1915 51.4561 14.8709 51.5539 13.697 51.0158C12.572 50.4778 11.7405 49.4012 11.5938 48.1295C11.4471 46.76 11.3492 45.3909 11.3492 43.9724C11.3492 19.7117 32.3816 0 58.2075 0C84.0333 0 105.066 19.7117 105.066 43.9724C105.066 57.2766 98.9026 69.5043 88.0441 77.8683L89.7071 91.173C90.0984 94.499 88.631 97.6294 85.843 99.4392C84.4735 100.32 82.8594 100.809 81.2452 100.809ZM58.1586 80.5585C58.8433 80.5096 59.5281 80.7057 60.1151 81.097L80.6094 93.2762C81.1474 93.6186 81.5876 93.4719 81.8811 93.2762C82.1257 93.1295 82.517 92.7382 82.4191 92.0534L80.5116 76.5966C80.3648 75.227 80.9518 73.9069 82.0278 73.1243C92.006 66.1298 97.7287 55.4664 97.7287 43.8741C97.7287 23.6735 80.0224 7.23895 58.2075 7.23895C37.2239 7.23895 20.0067 22.4998 18.735 41.6735C22.4034 40.2551 26.3654 39.4724 30.474 39.4724C47.3489 39.4724 61.0444 52.3849 61.0444 68.2814C61.0933 72.5857 60.0661 76.7433 58.1586 80.5585Z"
+            fill="#00ED64" />
+          <path
+            d="M16.2389 105.113C14.9672 105.113 13.7444 104.771 12.6194 104.037C10.4184 102.619 9.2445 100.173 9.53798 97.5806L10.5162 90.048C3.913 84.6677 0 76.6949 0 68.3309C0 58.793 4.98912 49.8909 13.3532 44.5595C18.3911 41.2824 24.3584 39.5217 30.5703 39.5217C47.4452 39.5217 61.1407 52.4344 61.1407 68.3309C61.1407 74.7874 58.7929 81.146 54.4886 86.184C48.9615 92.885 40.6952 96.798 31.5975 97.0914L19.6628 104.184C18.5867 104.82 17.4128 105.113 16.2389 105.113ZM30.5214 46.8583C25.728 46.8583 21.1301 48.179 17.2661 50.7224C11.0053 54.7332 7.28796 61.2875 7.28796 68.3309C7.28796 75.1297 10.6141 81.3416 16.4835 85.3524C17.6085 86.135 18.1954 87.4557 18.0487 88.8252L16.9726 97.1893L28.6627 90.2437C29.2497 89.9013 29.8855 89.7057 30.5214 89.7057C37.7115 89.7057 44.5105 86.6242 48.8148 81.3905C52.043 77.5754 53.7549 73.0754 53.7549 68.282C53.7549 56.4941 43.3366 46.8583 30.5214 46.8583Z"
+            fill="#00ED64" />
+        </svg>
+
+
+        <div class=" border-blue-600 font-['poppins'] font-bold text-4xl max-[412px]:text-3xl">
+          <!-- title -->
+          Auto Suggestions
+        </div>
+
+        <div class=" border-blue-600 text-stone-500 text-lg">
+          <!-- description -->
+          Managing your finances just got smarter with EXTracker's auto suggestion feature. Our intelligent algorithms
+          analyze your spending habits and financial goals to offer personalized suggestions on how to optimize your
+          budget.
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+<!-- feedback form is here -->
+  <section class="  mt-9 font-['poppins'] border-blue-300 flex flex-row justify-center ">
+    <div class="container-fluid w-[90%] flex flex-row gap-4 max-[876px]:flex-col  max-[776px]:items-center ">
+    <div class="text-[#00ED64] text-8xl font-['poppins'] font-semibold  max-[776px]:text-center max-[576px]:text-7xl max-[414px]:text-6xl">
+      <span>Feedback</span>
+      <div class="text-lg text-black font-normal max-[576px]:text-sm max-[414px]:text-xs">We value your opinion! Your feedback is crucial to help us improve our products
+        and services.
+      </div>
+    </div>
+
+    <div class=" container-fluid   border-blue-600  w-[90%] ">
+        <!-- form -->
+        
+        <form class=" border-white-100 mt-2  max-[776px]:text-center">
+          <input type="Email" placeholder="Email"
+            class="border border-stone-400 rounded-md p-2 w-full bg-transparent" />
+          <textarea class="w-full border border-stone-400 rounded-md mt-2 bg-transparent p-2" placeholder="Message"
+            id="" cols="30" rows="10"></textarea>
+            <input type="submit" class="border border-[#003E59] p-2 w-[200px] h-[50px] bg-[#00ED64] rounded-full cursor-pointer hover:bg-transparent ">
+        </form>
+      
+     
+    </div>
+  </div>
+  </section>
+  {% endblock %}
+  <!--  colors:{
+        'green-yellow' : '#00ED64',
+        'dark-heading' :'#003E59',
+        'greenblack-900' : '#001E2B',
+        'medium-gray-txt' :'#747474',
+        'olive-green':'#00684A',
+        'white-cream':'#F2FDFF',
+        'light-gray-txt':'#D4D4D4'
+      } -->
